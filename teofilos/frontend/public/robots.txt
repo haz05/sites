@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://teofilos.pages.dev/sitemap.xml
+
