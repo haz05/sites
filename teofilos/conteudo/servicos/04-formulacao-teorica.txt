@@ -1,0 +1,14 @@
+# ==============================================================================
+# SERVIÇO: FORMULAÇÃO TEÓRICA
+# ==============================================================================
+# DICA: Para desativar este serviço do site, mude o status para: Desabilitado
+
+status: Ativo
+icone: i-flask
+categoria: FORMULAÇÃO TEÓRICA
+titulo: Formulação teórica
+descricao: Desenvolvimento de fórmulas com base técnica e científica para produtos seguros e eficazes.
+imagem: svc-4.webp
+imagem_alt: Conta-gotas sobre placa com gel
+whatsapp_assunto: Formulação teórica de cosméticos
+

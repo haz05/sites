@@ -1,0 +1,14 @@
+# ==============================================================================
+# SERVIÇO: TABELAS NUTRICIONAIS
+# ==============================================================================
+# DICA: Para desativar este serviço do site, mude o status para: Desabilitado
+
+status: Ativo
+icone: i-table
+categoria: TABELAS NUTRICIONAIS
+titulo: Tabelas nutricionais
+descricao: Elaboração de informações nutricionais no padrão Anvisa, com precisão e clareza.
+imagem: svc-3.webp
+imagem_alt: Tabela de informação nutricional impressa
+whatsapp_assunto: Tabelas nutricionais
+

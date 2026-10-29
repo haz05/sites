@@ -1,0 +1,10 @@
+# ==============================================================================
+# NÚMERO / MÉTRICA: REVISADO POR PROFESSORES
+# ==============================================================================
+# DICA: Para ocultar este item do site, mude o status para: Desabilitado
+
+status: Ativo
+valor: 100
+sufixo: %
+legenda: Revisado por professores
+

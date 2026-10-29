@@ -1,4 +1,4 @@
-import { EMAIL, INSTAGRAM, PHONE, WHATSAPP } from '../data/content'
+import { CONTATO, EMAIL, EMPRESA, PHONE, REDES_SOCIAIS, WHATSAPP, isEnabled } from '../data/content'
 import { Logo } from './Icons'
 import PrivacyModal from './PrivacyModal'
 
@@ -8,7 +8,14 @@ export default function Footer() {
       <div className="footer-top">
         <div>
           <Logo />
-          <p style={{ marginTop: 26, maxWidth: '34ch' }}>Empresa Júnior da UEM especializada em cosméticos.</p>
+          {isEnabled(EMPRESA.subtitulo) && (
+            <p style={{ marginTop: 26, maxWidth: '34ch' }}>{EMPRESA.subtitulo}</p>
+          )}
+          {isEnabled(EMPRESA.cnpj) && (
+            <p style={{ marginTop: 12, fontSize: '0.85rem', opacity: 0.8 }}>
+              CNPJ: {EMPRESA.cnpj}
+            </p>
+          )}
         </div>
         <div>
           <h4>Navegue</h4>
@@ -25,17 +32,44 @@ export default function Footer() {
         <div>
           <h4>Contato</h4>
           <ul>
-            <li><a href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noopener">WhatsApp (44) 92001-4599</a></li>
-            <li><a href={PHONE.href}>Telefone {PHONE.label}</a></li>
-            <li>{EMAIL}</li>
-            <li><a href={INSTAGRAM.url} target="_blank" rel="noopener">Instagram</a></li>
-            <li>UEM, Av. Colombo, 5790<br />Bloco Q-04, Sala 09<br />Jd. Universitário, Maringá, PR<br />CEP 87020-900</li>
+            {isEnabled(CONTATO.whatsappNumero) && (
+              <li>
+                <a href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noopener">
+                  WhatsApp {CONTATO.whatsappNumero}
+                </a>
+              </li>
+            )}
+            {PHONE && isEnabled(PHONE.label) && (
+              <li>
+                <a href={PHONE.href}>Telefone {PHONE.label}</a>
+              </li>
+            )}
+            {isEnabled(EMAIL) && <li>{EMAIL}</li>}
+            {isEnabled(CONTATO.horarioAtendimento) && (
+              <li>Atendimento: {CONTATO.horarioAtendimento}</li>
+            )}
+            {REDES_SOCIAIS.map((rede) => (
+              <li key={rede.id}>
+                <a href={rede.url} target="_blank" rel="noopener">
+                  {rede.name} {rede.handle ? `(${rede.handle})` : ''}
+                </a>
+              </li>
+            ))}
+            {isEnabled(CONTATO.endereco?.linha1) && (
+              <li>
+                {CONTATO.endereco.local && <>{CONTATO.endereco.local}<br /></>}
+                {CONTATO.endereco.linha1 && <>{CONTATO.endereco.linha1}<br /></>}
+                {CONTATO.endereco.linha2 && <>{CONTATO.endereco.linha2}<br /></>}
+                {CONTATO.endereco.cep && <>{CONTATO.endereco.cep}</>}
+              </li>
+            )}
           </ul>
         </div>
       </div>
       <div className="footer-bottom">
-        <span>© {new Date().getFullYear()} Teófilos. Todos os direitos reservados. · <PrivacyModal /></span>
-        <span>Site por Leonardo Gomes</span>
+        <span>
+          © {new Date().getFullYear()} {EMPRESA.nome || 'Teófilos'}. Todos os direitos reservados. · <PrivacyModal />
+        </span>
         <a href="#inicio">Voltar ao topo</a>
       </div>
     </footer>

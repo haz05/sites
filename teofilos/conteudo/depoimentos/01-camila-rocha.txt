@@ -1,0 +1,10 @@
+# ==============================================================================
+# DEPOIMENTO: CAMILA ROCHA
+# ==============================================================================
+# DICA: Para ocultar este depoimento do site, mude o status para: Desabilitado
+
+status: Ativo
+nome: Camila Rocha
+cargo: Fundadora, Flora Viva
+depoimento: A equipe revisou toda a rotulagem da nossa linha capilar e encontrou pontos que nem imaginávamos. Lançamos com tranquilidade e dentro das normas.
+

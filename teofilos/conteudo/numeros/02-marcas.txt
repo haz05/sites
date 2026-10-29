@@ -1,0 +1,10 @@
+# ==============================================================================
+# NÚMERO / MÉTRICA: MARCAS ATENDIDAS
+# ==============================================================================
+# DICA: Para ocultar este item do site, mude o status para: Desabilitado
+
+status: Ativo
+valor: 45
+sufixo: +
+legenda: Marcas atendidas
+

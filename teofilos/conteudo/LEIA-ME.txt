@@ -1,0 +1,50 @@
+==============================================================================
+GUIA RÁPIDO: COMO ATUALIZAR OS TEXTOS E SEÇÕES DO SITE TEÓFILOS
+==============================================================================
+
+Olá! Esta pasta foi criada para que qualquer pessoa consiga alterar textos,
+contatos, serviços, depoimentos, marcas e números do site sem programação.
+
+1. REGRA DE OURO DO "Desabilitado" (OCULTAR DO SITE):
+   - Se você não quiser mostrar qualquer item ou campo no site, basta escrever:
+     status: Desabilitado (ou deixar o valor vazio).
+   - O site remove automaticamente do layout qualquer item marcado como Desabilitado.
+
+2. INFORMAÇÕES DE CONTATO E EMPRESA:
+   - Pasta: gerais/
+   - Arquivo contato.txt: Telefone, WhatsApp, Horário de Atendimento, Redes Sociais, Endereço.
+   - Arquivo empresa.txt: Nome, Subtítulo, CNPJ (basta preencher quando tiver).
+
+3. SERVIÇOS:
+   - Pasta: servicos/
+   - Cada serviço tem seu próprio arquivo (ex: "01-pops.txt", "02-rotulagem.txt").
+   - Para adicionar: duplique um arquivo, renomeie (ex: "06-novo.txt") e preencha.
+   - Para remover: apague o arquivo ou coloque 'status: Desabilitado'.
+
+4. DEPOIMENTOS DE CLIENTES:
+   - Pasta: depoimentos/
+   - Cada depoimento tem seu arquivo (ex: "01-camila-rocha.txt").
+   - Campos: nome, cargo (ou empresa) e depoimento.
+
+5. MARCAS E PARCEIROS QUE CONFIAM:
+   - Pasta: parceiros/
+   - Cada marca parceira tem seu arquivo (ex: "01-flora-viva.txt").
+   - Campos: 'nome' da marca e 'status: Ativo'.
+
+6. NOSSOS NÚMEROS / MÉTRICAS (SEÇÃO VERDE):
+   - Pasta: numeros/
+   - Cada número tem seu arquivo (ex: "01-projetos.txt", "02-marcas.txt").
+   - Campos:
+     - valor: (ex: 120, 45, 9, 100)
+     - sufixo: (ex: +, %, ou Desabilitado se não tiver sufixo)
+     - legenda: (ex: Projetos entregues, Marcas atendidas)
+
+7. IMAGENS DO SITE:
+   - Ficam na pasta: frontend/public/images/
+   - No arquivo .txt de serviços, basta colocar o nome do arquivo da imagem:
+     Exemplo: imagem: svc-1.webp
+
+8. COMO PUBLICAR AS ALTERAÇÕES:
+   - Se estiver editando pelo GitHub (no navegador): basta clicar em "Commit changes" (Salvar).
+   - O site na Vercel atualizará sozinho em menos de 1 minuto!
+==============================================================================

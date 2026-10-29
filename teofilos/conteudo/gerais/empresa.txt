@@ -1,0 +1,16 @@
+# ==============================================================================
+# DADOS INSTITUCIONAIS DA EMPRESA
+# ==============================================================================
+# Dica: Qualquer campo com valor "Desabilitado" ou vazio é totalmente removido do site.
+
+nome_empresa: Teófilos
+razao_social: Teófilos Assessoria e Consultoria Farmacêutica
+subtitulo_rodape: Empresa Júnior da UEM especializada em cosméticos.
+
+# CNPJ da Empresa Júnior (ex: 00.000.000/0001-00)
+# Deixe como "Desabilitado" até obter o número do CNPJ oficial.
+cnpj: Desabilitado
+
+# Link do site oficial em produção (usado para compartilhamento e SEO)
+site_url: https://teofilos.pages.dev
+

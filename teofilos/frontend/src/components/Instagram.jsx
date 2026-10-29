@@ -1,12 +1,14 @@
-import { INSTAGRAM } from '../data/content'
+import { INSTAGRAM, isEnabled } from '../data/content'
 import { Icon } from './Icons'
 
 export default function Instagram() {
+  if (!isEnabled(INSTAGRAM?.url)) return null
+
   return (
     <section className="section posts wrap" id="conteudos">
       <div className="ig-bgtext" aria-hidden="true">
         <div className="ig-bgtrack" id="igTrack">
-          {[0, 1, 2, 3].map((i) => <span key={i}>{INSTAGRAM.handle}</span>)}
+          {[0, 1, 2, 3].map((i) => <span key={i}>{INSTAGRAM.handle || '@ejrteofilos'}</span>)}
         </div>
       </div>
       <div className="ig-wrap">

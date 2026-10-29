@@ -1,0 +1,14 @@
+# ==============================================================================
+# SERVIÇO: PROCEDIMENTOS OPERACIONAIS PADRÃO (POPs)
+# ==============================================================================
+# DICA: Para desativar este serviço do site, mude o status para: Desabilitado
+
+status: Ativo
+icone: i-file
+categoria: POPs
+titulo: Procedimentos Operacionais Padrão
+descricao: Rotinas documentadas e padronizadas para garantir qualidade e conformidade na sua operação.
+imagem: svc-1.webp
+imagem_alt: Documentos de POP sobre a bancada
+whatsapp_assunto: POPs (Procedimentos Operacionais Padrão)
+

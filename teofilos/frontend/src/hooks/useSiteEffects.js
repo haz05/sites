@@ -17,12 +17,17 @@ export function useSiteEffects() {
 
     // Registro de listeners para remover no cleanup
     const offs = []
-    const on = (el, ev, fn, opts) => { el.addEventListener(ev, fn, opts); offs.push(() => el.removeEventListener(ev, fn, opts)) }
+    const on = (el, ev, fn, opts) => {
+      if (!el) return
+      el.addEventListener(ev, fn, opts)
+      offs.push(() => el.removeEventListener(ev, fn, opts))
+    }
     const rafs = []
 
     /* header state */
     const header = $('#header'); let lastY = 0
     const onScroll = (y) => {
+      if (!header) return
       header.classList.toggle('scrolled', y > 40)
       header.classList.toggle('hide', y > lastY && y > 500 && !document.body.classList.contains('menu-open'))
       lastY = y
@@ -123,9 +128,11 @@ export function useSiteEffects() {
 
       /* marquee: velocidade reage ao scroll */
       const mq = $('#marquee'); let mx = 0, dir = 1, boost = 0
-      marqueeTick = () => { const half = mq.scrollWidth / 2; mx -= (0.6 + boost) * dir; boost *= 0.92; if (mx <= -half) mx += half; if (mx > 0) mx -= half; mq.style.transform = `translateX(${mx}px)` }
-      gsap.ticker.add(marqueeTick)
-      ScrollTrigger.create({ onUpdate: (s) => { dir = s.direction; boost = Math.min(Math.abs(s.getVelocity()) / 300, 12) } })
+      if (mq) {
+        marqueeTick = () => { const half = mq.scrollWidth / 2; mx -= (0.6 + boost) * dir; boost *= 0.92; if (mx <= -half) mx += half; if (mx > 0) mx -= half; mq.style.transform = `translateX(${mx}px)` }
+        gsap.ticker.add(marqueeTick)
+        ScrollTrigger.create({ onUpdate: (s) => { dir = s.direction; boost = Math.min(Math.abs(s.getVelocity()) / 300, 12) } })
+      }
 
       /* revelações genéricas */
       ScrollTrigger.batch('[data-reveal]', { start: 'top 88%', once: true, onEnter: (els) => gsap.to(els, { opacity: 1, y: 0, duration: 1.1, stagger: 0.1, ease: 'expo.out' }) })
@@ -141,16 +148,18 @@ export function useSiteEffects() {
       gsap.to('#aboutSm', { y: -50, ease: 'none', scrollTrigger: { trigger: '.about-visual', start: 'top bottom', end: 'bottom top', scrub: true } })
       gsap.from('.about-badge', { scale: 0, rotate: -180, duration: 1.4, ease: 'back.out(1.6)', scrollTrigger: { trigger: '.about-visual', start: 'top 70%' } })
       gsap.to('.about-badge', { y: 60, ease: 'none', scrollTrigger: { trigger: '.about-visual', start: 'top bottom', end: 'bottom top', scrub: true } })
-      ScrollTrigger.create({ trigger: '.facts', start: 'top 85%', once: true, onEnter: () => $('.facts').classList.add('in') })
+      ScrollTrigger.create({ trigger: '.facts', start: 'top 85%', once: true, onEnter: () => $('.facts')?.classList.add('in') })
       gsap.from('.pillar', { y: 80, opacity: 0, rotateX: -18, transformPerspective: 900, duration: 1.3, stagger: 0.14, ease: 'expo.out', scrollTrigger: { trigger: '.pillars', start: 'top 85%' } })
       $$('.pillar').forEach((c) => on(c, 'mousemove', (e) => { const r = c.getBoundingClientRect(); c.style.setProperty('--px', (e.clientX - r.left) + 'px'); c.style.setProperty('--py', (e.clientY - r.top) + 'px') }))
 
       /* instagram */
-      gsap.from('.ig-logo', { scale: 0.3, rotate: -25, opacity: 0, duration: 1.4, ease: 'back.out(1.7)', scrollTrigger: { trigger: '.ig-logo', start: 'top 85%' } })
-      gsap.to('.ig-tile .ig-d', { strokeDashoffset: 0, duration: 1.4, stagger: 0.25, ease: 'power2.inOut', delay: 0.4, scrollTrigger: { trigger: '.ig-logo', start: 'top 85%' } })
       const lg = $('#igLogo')
-      on(lg, 'mousemove', (e) => { const r = lg.getBoundingClientRect(); gsap.to(lg, { x: (e.clientX - r.left - r.width / 2) * 0.25, y: (e.clientY - r.top - r.height / 2) * 0.25, duration: 0.6, ease: 'power3' }) })
-      on(lg, 'mouseleave', () => gsap.to(lg, { x: 0, y: 0, duration: 0.8, ease: 'elastic.out(1,.4)' }))
+      if (lg) {
+        gsap.from('.ig-logo', { scale: 0.3, rotate: -25, opacity: 0, duration: 1.4, ease: 'back.out(1.7)', scrollTrigger: { trigger: '.ig-logo', start: 'top 85%' } })
+        gsap.to('.ig-tile .ig-d', { strokeDashoffset: 0, duration: 1.4, stagger: 0.25, ease: 'power2.inOut', delay: 0.4, scrollTrigger: { trigger: '.ig-logo', start: 'top 85%' } })
+        on(lg, 'mousemove', (e) => { const r = lg.getBoundingClientRect(); gsap.to(lg, { x: (e.clientX - r.left - r.width / 2) * 0.25, y: (e.clientY - r.top - r.height / 2) * 0.25, duration: 0.6, ease: 'power3' }) })
+        on(lg, 'mouseleave', () => gsap.to(lg, { x: 0, y: 0, duration: 0.8, ease: 'elastic.out(1,.4)' }))
+      }
 
       /* serviços: imagens entram com clip */
       $$('.svc-img').forEach((el) => gsap.fromTo(el, { clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0 0% 0 0)', duration: 1.4, ease: 'expo.inOut', scrollTrigger: { trigger: el, start: 'top 88%' } }))

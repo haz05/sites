@@ -1,0 +1,10 @@
+# ==============================================================================
+# DEPOIMENTO: JULIANA FARIA
+# ==============================================================================
+# DICA: Para ocultar este depoimento do site, mude o status para: Desabilitado
+
+status: Ativo
+nome: Juliana Faria
+cargo: CEO, Aurora Skin
+depoimento: Da ideia da fórmula até a pesquisa de mercado, tivemos um acompanhamento técnico de verdade, com um custo que cabia no orçamento de uma marca nova.
+

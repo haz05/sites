@@ -1,0 +1,14 @@
+# ==============================================================================
+# SERVIÇO: CONSULTORIA DE MERCADO
+# ==============================================================================
+# DICA: Para desativar este serviço do site, mude o status para: Desabilitado
+
+status: Ativo
+icone: i-users
+categoria: CONSULTORIA DE MERCADO
+titulo: Consultoria de mercado
+descricao: Análise de mercado, público e concorrência para decisões mais estratégicas.
+imagem: svc-5.webp
+imagem_alt: Notebook com gráficos de mercado
+whatsapp_assunto: Consultoria de mercado
+

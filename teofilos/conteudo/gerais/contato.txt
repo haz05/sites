@@ -1,0 +1,60 @@
+# ==============================================================================
+# INFORMAÇÕES DE CONTATO E LOCALIZAÇÃO - TEÓFILOS
+# ==============================================================================
+# COMO EDITAR:
+# - Altere os valores após os dois pontos (:).
+# - Para OCULTAR qualquer informação do site, deixe o valor vazio ou escreva: Desabilitado
+# - Linhas iniciadas com # são apenas comentários e instruções (não aparecem no site).
+# ==============================================================================
+
+# WhatsApp Principal (usado no botão flutuante e botões de contato)
+whatsapp_numero: (44) 92001-4599
+whatsapp_numero_limpo: 5544920014599
+whatsapp_mensagem_padrao: Olá! Vim pelo site da Teófilos e gostaria de mais informações.
+
+# Telefone Fixo
+telefone: (44) 3011-5323
+
+# E-mail de Atendimento
+email: negocios.teofilos@gmail.com
+
+# Horário de Atendimento (ex: Segunda a Sexta, das 08h às 18h)
+# Deixe como "Desabilitado" caso não queira exibir no momento.
+horario_atendimento: Desabilitado
+
+# ==============================================================================
+# REDES SOCIAIS
+# ==============================================================================
+# Preencha o usuário e o link da rede. Caso não use, deixe como "Desabilitado".
+
+# Instagram (Ativo)
+instagram_usuario: @ejrteofilos
+instagram_link: https://www.instagram.com/ejrteofilos/
+
+# LinkedIn (Atualmente desabilitado - preencha quando tiverem o perfil criado)
+linkedin_usuario: Desabilitado
+linkedin_link: Desabilitado
+
+# Facebook (Atualmente desabilitado)
+facebook_usuario: Desabilitado
+facebook_link: Desabilitado
+
+# TikTok (Atualmente desabilitado)
+tiktok_usuario: Desabilitado
+tiktok_link: Desabilitado
+
+# YouTube (Atualmente desabilitado)
+youtube_usuario: Desabilitado
+youtube_link: Desabilitado
+
+# ==============================================================================
+# ENDEREÇO E MAPA
+# ==============================================================================
+endereco_nome_local: Universidade Estadual de Maringá (UEM)
+endereco_linha_1: Av. Colombo, 5790, Bloco Q-04, Sala 09
+endereco_linha_2: Jd. Universitário, Maringá, PR
+endereco_cep: CEP 87020-900
+
+google_maps_link: https://www.google.com/maps/search/?api=1&query=Av.+Colombo,+5790,+Bloco+Q-04,+Universidade+Estadual+de+Maring%C3%A1
+google_maps_embed: https://maps.google.com/maps?q=Universidade+Estadual+de+Maringa+Bloco+Q-04&t=&z=15&ie=UTF8&iwloc=&output=embed
+

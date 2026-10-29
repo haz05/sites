@@ -1,0 +1,10 @@
+# ==============================================================================
+# DEPOIMENTO: RAFAEL MENDES
+# ==============================================================================
+# DICA: Para ocultar este depoimento do site, mude o status para: Desabilitado
+
+status: Ativo
+nome: Rafael Mendes
+cargo: Sócio, Botânica Pura
+depoimento: Os POPs ficaram claros e fáceis de aplicar. Nossa produção ficou mais organizada e passamos na vistoria sem nenhuma pendência.
+

@@ -1,0 +1,8 @@
+# ==============================================================================
+# MARCA PARCEIRA / CLIENTE
+# ==============================================================================
+# DICA: Para ocultar esta marca do site, mude o status para: Desabilitado
+
+status: Ativo
+nome: Flora Viva
+

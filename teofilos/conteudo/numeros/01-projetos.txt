@@ -1,0 +1,10 @@
+# ==============================================================================
+# NÚMERO / MÉTRICA: PROJETOS ENTREGUES
+# ==============================================================================
+# DICA: Para ocultar este item do site, mude o status para: Desabilitado
+
+status: Ativo
+valor: 120
+sufixo: +
+legenda: Projetos entregues
+

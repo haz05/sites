@@ -1,0 +1,14 @@
+# ==============================================================================
+# SERVIÇO: ROTULAGEM DE COSMÉTICOS
+# ==============================================================================
+# DICA: Para desativar este serviço do site, mude o status para: Desabilitado
+
+status: Ativo
+icone: i-tag
+categoria: ROTULAGEM
+titulo: Rotulagem de cosméticos
+descricao: Rótulos em conformidade com as normas da Anvisa, com orientação técnica especializada.
+imagem: svc-2.webp
+imagem_alt: Frasco de cosmético com rótulo
+whatsapp_assunto: Rotulagem de cosméticos
+
